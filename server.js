@@ -59,10 +59,10 @@ app.get("/api", (req, res) => {
     res.json(rapperList)
 })
 
-app.get("/api" /: rapperName, (req, res) => {
-    const realName = req.body.rapperName.toLowerCase();
+app.get("/api/:rapperName", (req, res) => {
+    const realName = req.params.rapperName.toLowerCase();
     if (realName in rapperList) {
-        res.json(rapperList[realName])
+        res.json(rapperList[realName].birthName)
     }
 })
 
