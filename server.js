@@ -1,5 +1,11 @@
 const express = require("express")
 const PORT = 8000;
+const cors = require("cors")
+
+
+app.use(cors)
+
+
 const rapperList = {
     "50 cents": {
         "birthName": "Curtis James Jackson",
