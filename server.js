@@ -64,6 +64,7 @@ app.get("/", (req, res) => {
 // app.post("/:rapperName", (req, res) => {
 //     const realName = req.params.rapperName.toLowerCase()
 //     res.sendFile(__dirname + "/index.html")
+
 // })
 
 
