@@ -1,9 +1,6 @@
 const express = require("express")
-const PORT = 8000;
-const cors = require("cors")
-
-
-app.use(cors)
+const PORT = 8001;
+// const cors = require("cors")
 
 
 const rapperList = {
@@ -56,16 +53,19 @@ const rapperList = {
 }
 
 const app = express();
+// app.use(cors)
+
 
 app.get("/", (req, res) => {
     res.sendFile(__dirname + "/index.html")
 })
 
-// app.post("/:rapperName", (req, res) => {
-//     const realName = req.params.rapperName.toLowerCase()
-//     res.sendFile(__dirname + "/index.html")
+app.post("/addRapper", (req, res) => {
+    const realName = req.params.rname.toLowerCase()
+    console.log(realName)
+    res.sendFile(__dirname + "/index.html")
 
-// })
+})
 
 
 app.get("/api", (req, res) => {
